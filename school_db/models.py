@@ -19,8 +19,6 @@ class Instructor(models.Model):
     last_name = models.CharField(max_length=40)
     hire_date = models.DateField()
 
-
-
 class Course(models.Model):
     name = models.CharField(max_length=40)
     instructor = models.ForeignKey(Instructor, null=True, blank=True, on_delete=models.SET_NULL)
